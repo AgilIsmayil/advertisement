@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Tapaz</title>
+  </head>
+  <body>
+    <section class="container">
+      <header
+        class="flex-column align-content-between align-content-md-stretch flex-md-row h-auto"
+      >
+        <ul class="links">
+          <li>
+            <a href="https://tap.az">Tap.az</a>
+          </li>
+          <li>
+            <a href="https://bina.az">Bina.az</a>
+          </li>
+          <li>
+            <a href="https://boss.az">Boss.az</a>
+          </li>
+        </ul>
+        <ul class="header-menu">
+          <li>
+            <span>Dəstək</span>
+            <span>
+              <a href="tel:(012) 505-77-55">(012) 505-77-55</a>
+            </span>
+          </li>
+          <li>
+            <a href="/help">Yardım</a>
+          </li>
+          <li>
+            <a href="#">AZ</a>
+          </li>
+          <li>
+            <a href="/bookmarks.html">Seçilmişlər</a>
+          </li>
+          <li>
+            <a href="registration.html" class="mainLoginIcon">
+              <span class="loginIconDesign">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path
+                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+                  />
+                </svg>
+              </span>
+
+              <span>Giriş</span>
+            </a>
+          </li>
+        </ul>
+      </header>
+      <section class="headerNav">
+        <div class="headerLeft">
+          <a href="index.html" class="turboLogo"> Turbo.az </a>
+        </div>
+        <div class="headerRight">
+          <a href="/newauto.html" class="addNewAnnouncementBut">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+            >
+              <path
+                fill="#FFF"
+                fill-rule="nonzero"
+                d="M13.75 6.25h-2.5v5h-5v2.5h5v5h2.5v-5h5v-2.5h-5v-5zM12.5 0C5.625 0 0 5.625 0 12.5S5.625 25 12.5 25 25 19.375 25 12.5 19.375 0 12.5 0zm0 22.5c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z"
+              />
+            </svg>
+
+            <span>Yeni elan</span>
+          </a>
+        </div>
+      </section>
+      <section class="filter p-4">
+        <form class="row">
+          <div class="col-12 col-md-3">
+            <select class="form-element">
+              <option value="1">Mercedes</option>
+              <option value="2">BWM</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-3">
+            <select class="form-element">
+              <option value="1">Mercedes</option>
+              <option value="2">BWM</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="d-flex checkboxes">
+              <input type="radio" name="type" value="1" id="all" />
+              <label for="all" class="form-element"> Hamsı </label>
+              <input type="radio" name="type" value="2" id="new" />
+              <label for="new" class="form-element"> Yeni </label>
+              <input type="radio" name="type" value="3" id="secondary" />
+              <label for="secondary" class="form-element"> Sürülmüş </label>
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <select class="form-element">
+              <option value="1">Mercedes</option>
+              <option value="2">BWM</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="filterFlexDes">
+              <div class="filterFlexDes50">
+                <input
+                  type="number"
+                  class="form-element"
+                  placeholder="Qiymet, min."
+                />
+              </div>
+              <div class="filterFlexDes50">
+                <input type="number" class="form-element" placeholder="maks" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3">
+            <div class="filterFlexDes">
+              <div class="filterFlexDes33">
+                <select class="form-element">
+                  <option value="1">AZN</option>
+                  <option value="2">USD</option>
+                </select>
+              </div>
+              <div class="filterFlexDes33">
+                <input
+                  type="checkbox"
+                  name="autoloan"
+                  value="autoloan"
+                  id="autoloan"
+                />
+                <label for="autoloan" class="form-element"> Kredit </label>
+              </div>
+              <div class="filterFlexDes33">
+                <input
+                  type="checkbox"
+                  name="autobarter"
+                  value="autobarter"
+                  id="autobarter"
+                />
+                <label for="autobarter" class="form-element"> Barter </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3">
+            <select class="form-element">
+              <option value="0">Ban novu</option>
+              <option value="1">Mercedes</option>
+              <option value="2">BWM</option>
+            </select>
+          </div>
+
+          <div class="col-12 col-md-3">
+            <div class="filterFlexDes">
+              <div class="filterFlexDes50">
+                <select class="form-element" placeholder="bos">
+                  <option value="0">Il, min</option>
+                  <option value="1">Mercedes</option>
+                  <option value="2">BWM</option>
+                </select>
+              </div>
+              <div class="filterFlexDes50">
+                <select class="form-element">
+                  <option value="0">maks</option>
+                  <option value="1">Mercedes</option>
+                  <option value="2">BWM</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 d-flex justify-content-end">
+            <button class="btn btn-danger">Axtar</button>
+          </div>
+        </form>
+      </section>
+      <main>
+        <section class="announcement p-4">
+          <div class="header d-flex justify-content-between">
+            <span class="fw-bold">PREMİUM ELANLAR</span>
+            <span>Lorem lorem lorem</span>
+          </div>
+          <div class="row mt-4">
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <svg
+                    class="like-icon"
+                    fill="#fff"
+                    height="800px"
+                    width="800px"
+                    version="1.1"
+                    id="Capa_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 471.701 471.701"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <path
+                        d="M433.601,67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7,13.6-92.4,38.3l-12.9,12.9l-13.1-13.1
+		c-24.7-24.7-57.6-38.4-92.5-38.4c-34.8,0-67.6,13.6-92.2,38.2c-24.7,24.7-38.3,57.5-38.2,92.4c0,34.9,13.7,67.6,38.4,92.3
+		l187.8,187.8c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-3.9l188.2-187.5c24.7-24.7,38.3-57.5,38.3-92.4
+		C471.801,124.501,458.301,91.701,433.601,67.001z M414.401,232.701l-178.7,178l-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3
+		s10.7-53.7,30.3-73.2c19.5-19.5,45.5-30.3,73.1-30.3c27.7,0,53.8,10.8,73.4,30.4l22.6,22.6c5.3,5.3,13.8,5.3,19.1,0l22.4-22.4
+		c19.6-19.6,45.7-30.4,73.3-30.4c27.6,0,53.6,10.8,73.2,30.3c19.6,19.6,30.3,45.6,30.3,73.3
+		C444.801,187.101,434.001,213.101,414.401,232.701z"
+                      />
+                    </g>
+                  </svg>
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <svg
+                    class="like-icon"
+                    fill="red"
+                    height="800px"
+                    width="800px"
+                    version="1.1"
+                    id="Capa_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 471.701 471.701"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <path
+                        d="M433.601,67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7,13.6-92.4,38.3l-12.9,12.9l-13.1-13.1
+		c-24.7-24.7-57.6-38.4-92.5-38.4c-34.8,0-67.6,13.6-92.2,38.2c-24.7,24.7-38.3,57.5-38.2,92.4c0,34.9,13.7,67.6,38.4,92.3
+		l187.8,187.8c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-3.9l188.2-187.5c24.7-24.7,38.3-57.5,38.3-92.4
+		C471.801,124.501,458.301,91.701,433.601,67.001z M414.401,232.701l-178.7,178l-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3
+		s10.7-53.7,30.3-73.2c19.5-19.5,45.5-30.3,73.1-30.3c27.7,0,53.8,10.8,73.4,30.4l22.6,22.6c5.3,5.3,13.8,5.3,19.1,0l22.4-22.4
+		c19.6-19.6,45.7-30.4,73.3-30.4c27.6,0,53.6,10.8,73.2,30.3c19.6,19.6,30.3,45.6,30.3,73.3
+		C444.801,187.101,434.001,213.101,414.401,232.701z"
+                      />
+                    </g>
+                  </svg>
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-3">
+              <a href="#" target="_blank" class="card">
+                <div class="position-relative">
+                  <img
+                    src="https://turbo.azstatic.com/assets/application/sprites/main-81621bca022dacba82baf03eb6a48661caa4cadfcac266156ebeadeb662d1b14.svg#bookmarks--favorite-unselected"
+                    class="like-icon"
+                  />
+                  <span class="robbin">Salon</span>
+                  <img class="card-img-top" src="./image.jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <div class="gap-1">
+                    <span class="price">3000 AZN</span>
+                    <span class="model">Minsk D4,125</span>
+                    <span class="info">2023, 0.1L,0 km</span>
+                    <span class="location-info"> Bakı,bu gün 16:46 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </section>
+  </body>
+</html>
