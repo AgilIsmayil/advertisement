@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use App\Models\Advertisement;
+use App\Models\AdvertisementView;
 use App\Models\Car;
 use App\SelectData\AdvertisementSelect;
 use Carbon\Carbon;
@@ -68,8 +69,9 @@ class HomeController extends Controller
         return $advertisements;
     }
 
-    public function show($id)
+    public function show($id, Request $request)
     {
+
         $advertisement = Advertisement::query()
             ->from('advertisements as a')
             ->select(
@@ -91,7 +93,7 @@ class HomeController extends Controller
                 'ai.vin_code',
                 'ct.name as city',
                 'b.name as ban',
-                'a.view',
+                'av.view',
                 'a.updated_at',
             )
             ->join('site_users as su', 'su.id', 'a.created_by')
@@ -104,16 +106,39 @@ class HomeController extends Controller
             ->join('bans as b', 'b.id', 'ai.ban_id')
             ->join('colors as cl', 'cl.id', 'ai.color_id')
             ->join('cities as ct', 'ct.id', 'ai.city_id')
+            ->leftJoin(DB::raw("(select COUNT(id) as view, advertisement_id from advertisement_views GROUP BY advertisement_id') as av"), 'av.advertisement_id', 'a.id')
             ->where('a.id', $id)
             ->where('expired_at', '>=', Carbon::now()->format('Y-m-d'))
             ->with(['photos', 'suppliers'])
             ->firstOrFail();
 
-        Advertisement::query()
-            ->where('id', $id)
-            ->update([
-                'view' => $advertisement->view + 1
-            ]);
+
+        $checkView = AdvertisementView::query()
+            ->where('advertisement_id', $id)
+            ->where('ip', $request->ip())
+            ->where('user_agent', $request->userAgent())
+            ->exists();
+
+        if (!$checkView) {
+            AdvertisementView::query()
+                ->create([
+                    'advertisement_id' => $id,
+                    'ip' => $request->ip(),
+                    'user_agent' => $request->userAgent(),
+                ]);
+        }
+
+        // $advertisement->view = AdvertisementView::query()
+        //     ->select(DB::raw('COUNT(id) as view'))
+        //     ->where('advertisement_id', $id)
+        //     ->first()->view ?? 0;
+
+
+        // Advertisement::query()
+        //     ->where('id', $id)
+        //     ->update([
+        //         'view' => $advertisement->view + 1
+        //     ]);
 
         // if(!$advertisement)
         //         abort(404);
