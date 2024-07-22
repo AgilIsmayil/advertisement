@@ -7,18 +7,18 @@
                 <select name="car_id" class="form-control">
                     <option value="">Masin</option>
                     @foreach($cars as $car)
-                    <option value="{{$car->id}}" @if($car->id == $request()->get('car_id')) selected @endif >{{$car->name}}</option>
+                    <option value="{{$car->id}}" @if($car->id == request()->get('car_id')) selected @endif >{{$car->name}}</option>
                     @endforeach
 
                 </select>
             </div>
 
-                   <div class="col-12 col-md-3">
-                    <select class="form-element pr-2" name='model_id' id="model_id">
+                   <div class="col-12 col-md-3 form-group">
+                    <select class="form-control pr-2" name='model_id' id="model_id">
                         <option value="">Benzin</option>
                         @foreach ($fuels as $fuel)
                             <option value="{{ $fuel->id }}" {{ request()->fuel_id == $fuel->id ? 'selected' : '' }}>
-                                {{ $model->name }}</option>
+                                {{ $fuel->name }}</option>
                         @endforeach
                     </select>
 

@@ -106,7 +106,7 @@ class HomeController extends Controller
             ->join('bans as b', 'b.id', 'ai.ban_id')
             ->join('colors as cl', 'cl.id', 'ai.color_id')
             ->join('cities as ct', 'ct.id', 'ai.city_id')
-            ->leftJoin(DB::raw("(select COUNT(id) as view, advertisement_id from advertisement_views GROUP BY advertisement_id') as av"), 'av.advertisement_id', 'a.id')
+            ->join(DB::raw("(select COUNT(id) as view, advertisement_id from advertisement_views GROUP BY advertisement_id) as av"), 'av.advertisement_id', 'a.id')
             ->where('a.id', $id)
             ->where('expired_at', '>=', Carbon::now()->format('Y-m-d'))
             ->with(['photos', 'suppliers'])
